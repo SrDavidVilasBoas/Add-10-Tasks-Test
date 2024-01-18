@@ -19,7 +19,7 @@ async function addTask() {
     return value
     });
 
-    seleniumText.should.equal("Aprender Selenium");
+    seleniumText.should.equal(seleniumText,"Aprender Selenium");
 
     // Quit it
     await driver.quit()

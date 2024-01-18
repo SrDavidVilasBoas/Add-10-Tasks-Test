@@ -13,5 +13,8 @@
     "chai": "^5.0.0",
     "selenium-webdriver": "^4.16.0"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1"
+  }
 }
