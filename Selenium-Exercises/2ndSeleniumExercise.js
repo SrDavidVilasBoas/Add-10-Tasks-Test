@@ -15,7 +15,7 @@ async function addTask() {
     // Got the element, Type in it and Click Return Key on Keyboard
     for (let on = 1; on <= 10; on++) {
     await driver.findElement(By.id("inputTask")).sendKeys("Aprender Selenium " + on, Key.RETURN)
-    }
+    };
     // Assertion / Validation
     for (let on = 1; on <= 10; on++) {
     let taskElement = await driver.findElement(By.xpath(`/html/body/div/section/ul/li[${on}]`));
