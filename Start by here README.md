@@ -2,4 +2,4 @@ I did this project to **get acquainted** to the used tools (**Selenium Webdriver
 ### * Grasping Selenium Webdriver by testing the given website's feature: Tests/fistTest.js;
 ### * Testing deeper the Input-Output feature with 10 items in order: Selenium-Exercises/1stSeleniumExercise.js;
 ### * Transcribing the project into Gherkin: features/Match.feature;
-### * Doing same but shorter and smarter with _FOR_. 2.0 version: Selenium-Exercises/2ndSeleniumExercise.js;
+### * Doing same (plus printing a message whether the Boolean is True or False at the Terminal's Output) but shorter and smarter with _FOR_. 2.1 version: Selenium-Exercises/2ndSeleniumExercise.js;
