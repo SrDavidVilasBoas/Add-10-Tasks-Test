@@ -14,7 +14,7 @@ async function addTask() {
 
     // Got the element, Type in it and Click Return Key on Keyboard
     for (let on = 1; on <= 10; on++) {
-    await driver.findElement(By.id("inputTask")).sendKeys("Aprender Selenium" + on, Key.RETURN)
+    await driver.findElement(By.id("inputTask")).sendKeys("Aprender Selenium " + on, Key.RETURN)
     }
     // Assertion / Validation
     for (let on = 1; on <= 10; on++) {
@@ -22,7 +22,7 @@ async function addTask() {
     let seleniumText = await taskElement.getText();
 
     // Return String and Boolean of Each Output
-    if (seleniumText.includes("Aprender Selenium" + on)) {
+    if (seleniumText.includes("Aprender Selenium " + on)) {
         console.log("Task " + on + " added successfully");
     } else {
         console.log("Task " + on + " not added as expected");
