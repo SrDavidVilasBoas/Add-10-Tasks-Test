@@ -3,3 +3,4 @@ I did this project to **get acquainted** to the used tools (**Selenium Webdriver
 ### * Testing deeper the Input-Output feature with 10 items: Selenium-Exercises/1stSeleniumExercise.js;
 ### * Transcribing the project into Gherkin: features/Match.feature;
 ### * Doing same (plus printing a message whether the Boolean is True or False at the Terminal's Output) but shorter and smarter with _FOR_. 2.1 version: Selenium-Exercises/2ndSeleniumExercise.js;
+### * Goal: Do the same as the 2ndSeleniumExercise.js, but with Workout related tasks. 4.0 version: Selenium-Exercises/3rdSeleniumExercise.js;
