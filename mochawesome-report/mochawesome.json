@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-01-24T18:30:43.480Z",
-    "end": "2024-01-24T18:30:51.035Z",
-    "duration": 7555,
+    "start": "2024-01-27T21:12:23.943Z",
+    "end": "2024-01-27T21:12:34.595Z",
+    "duration": 10652,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "fd50d825-1a22-40e3-a670-5628a691ade2",
+      "uuid": "5c7a8663-ca40-4b26-ace8-4b3704c82b0b",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "75c5c998-b4f7-4f3a-a7d7-d6a869286895",
+          "uuid": "05c885c4-cdae-4272-a72e-ee6807f39a3e",
           "title": "Add task functionality",
           "fullFile": "C:\\Users\\srovi\\Desktop\\TI\\QA\\Tech Fixe\\Aula Selinium Tech Fixe\\test\\2ndSeleniumExercise.js",
           "file": "\\test\\2ndSeleniumExercise.js",
@@ -38,7 +38,7 @@
               "title": "TC01 - create a task",
               "fullTitle": "Add task functionality TC01 - create a task",
               "timedOut": null,
-              "duration": 6007,
+              "duration": 9714,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,7 +47,7 @@
               "context": null,
               "code": "// Call driver\n    let driver = await new Builder().forBrowser(\"chrome\").build();\n    try {\n        // Open website\n        await driver.get(\"https://herziopinto.github.io/lista-de-tarefas/\")\n        // Got the element, Type in it and Click Return Key on Keyboard\n        for (let on = 1; on <= 10; on++) {\n            await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium \" + on, Key.RETURN)\n        };\n        // Assertion / Validation\n        for (let on = 1; on <= 10; on++) {\n            let taskElement = await driver.findElement(By.xpath(`/html/body/div/section/ul/li[${on}]`));\n            let seleniumText = await taskElement.getText();\n            // Return String and Boolean of Each Output\n            if (seleniumText.includes(\"Aprender Selenium \" + on)) {\n                console.log(\"Task \" + on + \" added successfully\");\n            } else {\n                console.log(\"Task \" + on + \" not added as expected\");\n            }\n        }\n        return true;\n    } finally {\n        await driver.sleep(2000);\n        // Quit it\n        await driver.quit();\n    }",
               "err": {},
-              "uuid": "6726fcaa-6685-473f-a476-51f48ff84819",
+              "uuid": "2ed9e74b-70aa-469d-845d-d422af66733f",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -55,57 +55,18 @@
           ],
           "suites": [],
           "passes": [
-            "6726fcaa-6685-473f-a476-51f48ff84819"
+            "2ed9e74b-70aa-469d-845d-d422af66733f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6007,
+          "duration": 9714,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
         },
         {
-          "uuid": "9103a7b7-4919-46ac-9d7a-57ad9b6329f6",
-          "title": "Add task functionality",
-          "fullFile": "C:\\Users\\srovi\\Desktop\\TI\\QA\\Tech Fixe\\Aula Selinium Tech Fixe\\test\\3rdSeleniumExercise.js",
-          "file": "\\test\\3rdSeleniumExercise.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "TC01 - create a task",
-              "fullTitle": "Add task functionality TC01 - create a task",
-              "timedOut": null,
-              "duration": 6867,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// Call driver\n    let driver = await new Builder().forBrowser(\"chrome\").build();\n    try {\n        // Open website\n        await driver.get(\"https://herziopinto.github.io/lista-de-tarefas/\")\n        // Get the element, Type in it and Click Return Key on Keyboard\n        const workoutTasks = [\n            \"Drink Pre-Workout\",\n            \"Arrive Gym\",\n            \"Do 10 exercises with 4 sections and 10 reps each\",\n            \"Drink pos-workout\",\n            \"Get home\",\n            \"Eat first meal with 100g protein in it\",\n            \"Eat 6-9 of this proteined meal along the day\",\n            \"Sleep before 10pm\",\n            \"Sleep at least 8h\",\n            \"Stand up before 6 to get ready again\"];\n        for (const task of workoutTasks) {\n            await driver.findElement(By.id(\"inputTask\")).sendKeys(task, Key.RETURN);\n        }\n        // Assertion / Validation\n        for (let on = 1; on <= 10; on++) {\n            let taskElement = await driver.findElement(By.xpath(`/html/body/div/section/ul/li[${on}]`));\n            let seleniumText = await taskElement.getText();\n            // Validate if the task is added successfully\n            if (seleniumText.includes(workoutTasks[on - 1])) {\n                console.log(`Task ${on} added successfully`);\n            } else {\n                console.log(`Task ${on} not added as expected. Instead, the Output was: ${seleniumText}`);\n            }\n        }\n        return true;\n    } finally {\n        await driver.sleep(2000);\n        // Quit it\n        await driver.quit();\n    }",
-              "err": {},
-              "uuid": "6effce77-2c15-4703-91ef-e3a2b73068f4",
-              "parentUUID": null,
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "6effce77-2c15-4703-91ef-e3a2b73068f4"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 6867,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": null
-        },
-        {
-          "uuid": "32e84b3a-8b3d-4e37-a4a2-e9c7e1e683ac",
+          "uuid": "5da2cfa4-48f5-4d2f-bb2f-3e2d8a298234",
           "title": "Add task functionality",
           "fullFile": "C:\\Users\\srovi\\Desktop\\TI\\QA\\Tech Fixe\\Aula Selinium Tech Fixe\\test\\1stSeleniumExercise.js",
           "file": "\\test\\1stSeleniumExercise.js",
@@ -116,7 +77,7 @@
               "title": "TC01 - create a task",
               "fullTitle": "Add task functionality TC01 - create a task",
               "timedOut": null,
-              "duration": 6969,
+              "duration": 9750,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -125,7 +86,7 @@
               "context": null,
               "code": "// Call driver\n        let driver = await new Builder().forBrowser(\"chrome\").build();\n        // Open website\n        await driver.get(\"https://herziopinto.github.io/lista-de-tarefas/\")\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium1\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText1 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[1]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText1.should.equal(seleniumText1, \"Aprender Selenium1\");\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium2\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText2 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[2]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText2.should.equal(seleniumText2, \"Aprender Selenium2\");\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium3\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText3 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[3]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText3.should.equal(seleniumText3, \"Aprender Selenium3\");\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium4\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText4 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[4]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText4.should.equal(seleniumText4, \"Aprender Selenium4\");\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium5\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText5 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[5]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText5.should.equal(seleniumText5, \"Aprender Selenium5\");\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium6\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText6 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[6]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText6.should.equal(seleniumText6, \"Aprender Selenium6\");\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium7\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText7 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[7]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText7.should.equal(seleniumText7, \"Aprender Selenium7\");\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium8\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText8 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[8]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText8.should.equal(seleniumText8, \"Aprender Selenium8\");\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium9\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText9 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[9]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText9.should.equal(seleniumText9, \"Aprender Selenium9\");\n        // Get the element and Type in it and Click go\n        await driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium10\", Key.RETURN)\n        // Assertion / Validation\n        let seleniumText10 = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[10]\")).getText()\n            .then(function (value) {\n                return value\n            });\n        seleniumText10.should.equal(seleniumText10, \"Aprender Selenium10\");\n        await driver.sleep(2000);\n        // Quit it\n        await driver.quit();",
               "err": {},
-              "uuid": "52c94467-6f72-49d0-b98a-751b6ce0d3c0",
+              "uuid": "ca64613d-84cf-49ba-a1dd-1ebbc82757fe",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -133,12 +94,51 @@
           ],
           "suites": [],
           "passes": [
-            "52c94467-6f72-49d0-b98a-751b6ce0d3c0"
+            "ca64613d-84cf-49ba-a1dd-1ebbc82757fe"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6969,
+          "duration": 9750,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "ac5b8e49-cf7e-4aa6-a2c9-245696a35979",
+          "title": "Add task functionality",
+          "fullFile": "C:\\Users\\srovi\\Desktop\\TI\\QA\\Tech Fixe\\Aula Selinium Tech Fixe\\test\\3rdSeleniumExercise.js",
+          "file": "\\test\\3rdSeleniumExercise.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01 - create a task",
+              "fullTitle": "Add task functionality TC01 - create a task",
+              "timedOut": null,
+              "duration": 9932,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Call driver\n    let driver = await new Builder().forBrowser(\"chrome\").build();\n    try {\n        // Open website\n        await driver.get(\"https://herziopinto.github.io/lista-de-tarefas/\")\n        // Get the element, Type in it and Click Return Key on Keyboard\n        const workoutTasks = [\n            \"Drink Pre-Workout\",\n            \"Arrive Gym\",\n            \"Do 10 exercises with 4 sections and 10 reps each\",\n            \"Drink pos-workout\",\n            \"Get home\",\n            \"Eat first meal with 100g protein in it\",\n            \"Eat 6-9 of this proteined meal along the day\",\n            \"Sleep before 10pm\",\n            \"Sleep at least 8h\",\n            \"Stand up before 6 to get ready again\"];\n        for (const task of workoutTasks) {\n            await driver.findElement(By.id(\"inputTask\")).sendKeys(task, Key.RETURN);\n        }\n        // Assertion / Validation\n        for (let on = 1; on <= 10; on++) {\n            let taskElement = await driver.findElement(By.xpath(`/html/body/div/section/ul/li[${on}]`));\n            let seleniumText = await taskElement.getText();\n            // Validate if the task is added successfully\n            if (seleniumText.includes(workoutTasks[on - 1])) {\n                console.log(`Task ${on} added successfully`);\n            } else {\n                console.log(`Task ${on} not added as expected. Instead, the Output was: ${seleniumText}`);\n            }\n        }\n        return true;\n    } finally {\n        await driver.sleep(2000);\n        // Quit it\n        await driver.quit();\n    }",
+              "err": {},
+              "uuid": "77dc5fe9-79e9-4902-b790-c4c68ad30681",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "77dc5fe9-79e9-4902-b790-c4c68ad30681"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9932,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
